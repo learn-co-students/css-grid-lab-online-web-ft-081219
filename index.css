@@ -5,9 +5,11 @@ body {
 }
 
 .grid-container {
-  height: 100vh;
+  height: 100vw;
   width: 100vw;
-  /* your properties here */
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1fr 1fr 1fr 1fr;
+  grid-gap: 1fr;
 }
 
 .grid-item {
@@ -15,4 +17,10 @@ body {
   border: 1px solid black;
 }
 
-/* add the .bigItem class */
+.bigItem {
+  grid-area: 2/2/4/4;
+  height:60%;
+  width: 60%;
+  justify-self: stretch;
+  /* align-self: center; */
+}
